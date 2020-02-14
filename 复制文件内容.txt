@@ -1,0 +1,12 @@
+int i = 0;
+string temp;
+ifstream infile;
+ofstream outfile;
+infile.open("C:\\Users\\waiting\\Desktop\\test.txt", ios::in);
+outfile.open("C:\\Users\\waiting\\Desktop\\out.txt", ios::app);
+while (!infile.eof())
+{
+	getline(infile, temp, '\n');
+	outfile << temp;
+}
+infile.close();

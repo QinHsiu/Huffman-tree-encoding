@@ -1,0 +1,26 @@
+ FILE *fp3,*fp4;
+    char ch;
+    fp3=fopen("1.txt","r+");
+    if(fp3==NULL){
+        printf("open file failure");
+        return -1;
+    }
+    fp4=fopen("3.txt","w");
+    if(fp4==NULL){
+    printf("open file failure");
+        return -1;
+    }
+    while(1)
+    {
+        ch=fgetc(fp3);
+        if(feof(fp3))break;
+        if(isupper(ch))
+        {
+            ch=tolower(ch);
+        }
+        fputc(ch,fp4);
+    }
+        fclose(fp3);
+        fclose(fp4);
+        system("del 1.txt>nul");
+        system("rename 3.txt 1.txt>nul");
