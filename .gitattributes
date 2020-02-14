@@ -1,3 +1,5 @@
 *.cpp linguist-language=C++
 *.docx linguist-language=C++
 *.doc linguist-language=C++
+*.txt linguist-language=C++
+
